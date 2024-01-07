@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/views/widgets/edit_note_view.dart';
+import 'package:notes_app/views/widgets/edit_note/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
