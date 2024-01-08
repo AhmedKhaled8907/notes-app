@@ -11,8 +11,9 @@ class NotesViewBody extends StatefulWidget {
   @override
   State<NotesViewBody> createState() => _NotesViewBodyState();
 }
+
 class _NotesViewBodyState extends State<NotesViewBody> {
-@override
+  @override
   void initState() {
     super.initState();
     context.read<NotesCubit>().fetchAllNotes();
@@ -22,7 +23,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        padding: EdgeInsets.symmetric(horizontal: 24.w).copyWith(top: 16.h),
         child: Column(
           children: [
             const CustomAppBar(
