@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/edit_note/edit_note_view.dart';
 
@@ -29,7 +31,7 @@ class NoteItem extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                note.text,
+                note.title,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 26.sp,
@@ -48,6 +50,7 @@ class NoteItem extends StatelessWidget {
               trailing: IconButton(
                 onPressed: () {
                   note.delete();
+                  context.read<NotesCubit>().fetchAllNotes();
                 },
                 icon: Icon(
                   FontAwesomeIcons.trash,
