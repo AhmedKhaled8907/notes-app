@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
+import 'package:notes_app/views/widgets/custom_widgets/custom_edit_text_form_field.dart';
 import 'package:notes_app/views/widgets/custom_widgets/custom_text_form_field.dart';
 import 'package:notes_app/views/widgets/edit_note/edit_note_color_list.dart';
 import 'package:notes_app/views/widgets/notes/custom_app_bar.dart';
@@ -41,18 +42,18 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               icon: Icons.check,
             ),
             SizedBox(height: 32.h),
-            CustomTextFormField(
+            CustomEditTextFormField(
+              controllerText: widget.note.title,
               onChanged: (value) {
                 title = value;
               },
-              hintText: widget.note.title,
             ),
             SizedBox(height: 16.h),
-            CustomTextFormField(
+            CustomEditTextFormField(
+              controllerText: widget.note.text,
               onChanged: (value) {
                 subtitle = value;
               },
-              hintText: widget.note.text,
               maxLines: 5,
             ),
             SizedBox(height: 16.h),
