@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_widgets/custom_edit_text_form_field.dart';
-import 'package:notes_app/views/widgets/custom_widgets/custom_text_form_field.dart';
 import 'package:notes_app/views/widgets/edit_note/edit_note_color_list.dart';
 import 'package:notes_app/views/widgets/notes/custom_app_bar.dart';
 
