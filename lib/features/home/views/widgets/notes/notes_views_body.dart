@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
-import 'package:notes_app/views/widgets/notes/custom_app_bar.dart';
-import 'package:notes_app/views/widgets/notes/notes_list_view.dart';
+import 'package:notes_app/features/home/manager/cubits/notes_cubit/notes_cubit.dart';
+import 'package:notes_app/features/home/views/widgets/notes/custom_app_bar.dart';
+import 'package:notes_app/features/home/views/widgets/notes/notes_list_view.dart';
 
 class NotesViewBody extends StatefulWidget {
   const NotesViewBody({super.key});

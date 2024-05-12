@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'package:notes_app/constants/constants.dart';
-import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
-import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/cubits/app_bloc_observer.dart';
-import 'package:notes_app/views/notes_view.dart';
+import 'package:notes_app/core/utils/constants/constants.dart';
+import 'package:notes_app/features/home/manager/cubits/notes_cubit/notes_cubit.dart';
+import 'package:notes_app/features/home/data/models/note_model.dart';
+import 'package:notes_app/app_bloc_observer.dart';
+import 'package:notes_app/features/splash/presentation/views/splash_view.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -37,7 +37,7 @@ class NotesApp extends StatelessWidget {
               brightness: Brightness.dark,
               fontFamily: 'Poppins',
             ),
-            home: const NotesView(),
+            home: const SplashView(),
           ),
         );
       }),

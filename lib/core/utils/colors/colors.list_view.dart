@@ -1,34 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/constants/constants.dart';
-import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:notes_app/core/utils/colors/color_item.dart';
+import 'package:notes_app/core/utils/constants/constants.dart';
+import 'package:notes_app/features/home/manager/cubits/add_note_cubit/add_note_cubit.dart';
 
-class ColorItem extends StatelessWidget {
-  const ColorItem({
-    super.key,
-    required this.isActive,
-    required this.color,
-  });
-
-  final bool isActive;
-  final Color color;
-  @override
-  Widget build(BuildContext context) {
-    return isActive
-        ? CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 40,
-            child: CircleAvatar(
-              backgroundColor: color,
-              radius: 36,
-            ),
-          )
-        : CircleAvatar(
-            backgroundColor: color,
-            radius: 36,
-          );
-  }
-}
 
 class ColorsListView extends StatefulWidget {
   const ColorsListView({super.key});
